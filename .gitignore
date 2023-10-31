@@ -1,2 +1,5 @@
 # ignore all .json files
 *.json
+home.html
+script2.js
+styles.css

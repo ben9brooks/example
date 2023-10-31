@@ -25,7 +25,5 @@ class Book {
     console.log(this[prop]);
   }
 }
-// class declaration: class Name {}
-// class expression: const Name = class {}
 
 export default Book;

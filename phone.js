@@ -6,7 +6,8 @@ class Phone {
     frontCameras,
     backCameras,
     batteryLevel,
-    status
+    status,
+    dateAcquired
   ) {
     //props
     this.model = model;
@@ -15,11 +16,19 @@ class Phone {
     this.backCameras = backCameras;
     this.batteryLevel = batteryLevel;
     this.status = status;
+    this.dateAcquired = dateAcquired;
   }
 
   //methods
   changeStatus(newStatus) {
     this.status = newStatus;
+  }
+  phoneAge() {
+    let now = new Date();
+    let acquired = new Date(this.dateAcquired);
+    let elapsed = now - acquired;
+    let daysSinceAcquired = Math.floor(elapsed / (1000 * 3600 * 24));
+    return daysSinceAcquired;
   }
 }
 
